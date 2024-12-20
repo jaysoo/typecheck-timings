@@ -1,0 +1,10 @@
+{
+  "name": "@ts-benchmarks/demo",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "demo",
+    "projectType": "application",
+    "sourceRoot": "apps/demo/src"
+  }
+}

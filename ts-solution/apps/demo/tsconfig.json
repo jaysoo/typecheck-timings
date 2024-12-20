@@ -1,0 +1,43 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+	{
+		"path": "../../packages/lib-10"
+	},
+	{
+		"path": "../../packages/lib-9"
+	},
+	{
+		"path": "../../packages/lib-8"
+	},
+	{
+		"path": "../../packages/lib-7"
+	},
+	{
+		"path": "../../packages/lib-6"
+	},
+	{
+		"path": "../../packages/lib-5"
+	},
+	{
+		"path": "../../packages/lib-4"
+	},
+	{
+		"path": "../../packages/lib-3"
+	},
+	{
+		"path": "../../packages/lib-2"
+	},
+	{
+		"path": "../../packages/lib-1"
+	},
+	{
+		"path": "./tsconfig.app.json"
+	},
+	{
+		"path": "./tsconfig.spec.json"
+	}
+],
+  "extends": "../../tsconfig.base.json"
+}

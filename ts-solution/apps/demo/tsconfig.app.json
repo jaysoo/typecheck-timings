@@ -1,0 +1,70 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "out-tsc/demo",
+    "tsBuildInfoFile": "dist/tsconfig.lib.tsbuildinfo",
+    "jsx": "react-jsx",
+    "lib": [
+      "dom"
+    ],
+    "types": [
+      "node",
+      "@nx/react/typings/cssmodule.d.ts",
+      "@nx/react/typings/image.d.ts",
+      "vite/client"
+    ],
+    "rootDir": "src",
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  },
+  "exclude": [
+    "dist",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.js",
+    "src/**/*.test.js",
+    "src/**/*.spec.jsx",
+    "src/**/*.test.jsx",
+    "jest.config.ts"
+  ],
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+],
+"references": [
+	{
+		"path": "../../packages/lib-10/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-9/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-8/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-7/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-6/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-5/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-4/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-3/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-2/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/lib-1/tsconfig.lib.json"
+	}
+]
+}

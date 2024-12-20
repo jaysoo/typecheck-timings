@@ -1,0 +1,169 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/test-setup.[jt]s"
+    ],
+    "sharedGlobals": []
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json"
+        }
+      },
+      "exclude": [
+        "packages/lib-1/*",
+        "packages/lib-2/*",
+        "packages/lib-3/*",
+        "packages/lib-4/*",
+        "packages/lib-5/*",
+        "packages/lib-6/*",
+        "packages/lib-7/*",
+        "packages/lib-8/*",
+        "packages/lib-9/*",
+        "packages/lib-10/*",
+        "packages/lib-11/*",
+        "packages/lib-12/*",
+        "packages/lib-13/*",
+        "packages/lib-14/*",
+        "packages/lib-15/*",
+        "packages/lib-16/*",
+        "packages/lib-17/*",
+        "packages/lib-18/*",
+        "packages/lib-19/*",
+        "packages/lib-20/*",
+        "packages/lib-21/*",
+        "packages/lib-22/*",
+        "packages/lib-23/*",
+        "packages/lib-24/*",
+        "packages/lib-25/*",
+        "packages/lib-26/*",
+        "packages/lib-27/*",
+        "packages/lib-28/*",
+        "packages/lib-29/*",
+        "packages/lib-30/*",
+        "packages/lib-31/*",
+        "packages/lib-32/*",
+        "packages/lib-33/*",
+        "packages/lib-34/*",
+        "packages/lib-35/*",
+        "packages/lib-36/*",
+        "packages/lib-37/*",
+        "packages/lib-38/*",
+        "packages/lib-39/*",
+        "packages/lib-40/*",
+        "packages/lib-41/*",
+        "packages/lib-42/*",
+        "packages/lib-43/*",
+        "packages/lib-44/*",
+        "packages/lib-45/*",
+        "packages/lib-46/*",
+        "packages/lib-47/*",
+        "packages/lib-48/*",
+        "packages/lib-49/*",
+        "packages/lib-50/*",
+        "packages/lib-51/*",
+        "packages/lib-52/*",
+        "packages/lib-53/*",
+        "packages/lib-54/*",
+        "packages/lib-55/*",
+        "packages/lib-56/*",
+        "packages/lib-57/*",
+        "packages/lib-58/*",
+        "packages/lib-59/*",
+        "packages/lib-60/*",
+        "packages/lib-61/*",
+        "packages/lib-62/*",
+        "packages/lib-63/*",
+        "packages/lib-64/*",
+        "packages/lib-65/*",
+        "packages/lib-66/*",
+        "packages/lib-67/*",
+        "packages/lib-68/*",
+        "packages/lib-69/*",
+        "packages/lib-70/*",
+        "packages/lib-71/*",
+        "packages/lib-72/*",
+        "packages/lib-73/*",
+        "packages/lib-74/*",
+        "packages/lib-75/*",
+        "packages/lib-76/*",
+        "packages/lib-77/*",
+        "packages/lib-78/*",
+        "packages/lib-79/*",
+        "packages/lib-80/*",
+        "packages/lib-81/*",
+        "packages/lib-82/*",
+        "packages/lib-83/*",
+        "packages/lib-84/*",
+        "packages/lib-85/*",
+        "packages/lib-86/*",
+        "packages/lib-87/*",
+        "packages/lib-88/*",
+        "packages/lib-89/*",
+        "packages/lib-90/*",
+        "packages/lib-91/*",
+        "packages/lib-92/*",
+        "packages/lib-93/*",
+        "packages/lib-94/*",
+        "packages/lib-95/*",
+        "packages/lib-96/*",
+        "packages/lib-97/*",
+        "packages/lib-98/*",
+        "packages/lib-99/*",
+        "packages/lib-100/*"
+      ]
+    },
+    {
+      "plugin": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    }
+  ],
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true,
+        "style": "css",
+        "linter": "none",
+        "bundler": "vite"
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "none",
+        "unitTestRunner": "none"
+      }
+    }
+  }
+}
