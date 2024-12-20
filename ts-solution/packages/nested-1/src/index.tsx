@@ -9,3 +9,6 @@ export default function Nested1() {
     </>
   )
 }
+;
+export const foo301 = 'foo';
+export const foo546 = 'foo'
