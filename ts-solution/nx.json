@@ -127,7 +127,13 @@
         "packages/lib-97/*",
         "packages/lib-98/*",
         "packages/lib-99/*",
-        "packages/lib-100/*"
+        "packages/lib-100/*",
+        "packages/nested-1/*",
+        "packages/nested-1-1/*",
+        "packages/nested-1-2/*",
+        "packages/nested-2/*",
+        "packages/nested-2-1/*",
+        "packages/nested-2-2/*"
       ]
     },
     {

@@ -114,7 +114,10 @@
       "@acme/lib-96": ["packages/lib-96/src/index.tsx"],
       "@acme/lib-97": ["packages/lib-97/src/index.tsx"],
       "@acme/lib-98": ["packages/lib-98/src/index.tsx"],
-      "@acme/lib-99": ["packages/lib-99/src/index.tsx"]
+      "@acme/lib-99": ["packages/lib-99/src/index.tsx"],
+      "@acme/nested-1": ["packages/nested-1/src/index.tsx"],
+      "@acme/nested-1-1": ["packages/nested-1-1/src/index.tsx"],
+      "@acme/nested-1-2": ["packages/nested-1-2/src/index.tsx"]
     }
   },
   "exclude": ["node_modules", "tmp"]

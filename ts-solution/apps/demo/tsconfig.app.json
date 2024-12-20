@@ -37,6 +37,15 @@
 ],
 "references": [
 	{
+		"path": "../../packages/nested-1-2/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/nested-1-1/tsconfig.lib.json"
+	},
+	{
+		"path": "../../packages/nested-1/tsconfig.lib.json"
+	},
+	{
 		"path": "../../packages/lib-10/tsconfig.lib.json"
 	},
 	{

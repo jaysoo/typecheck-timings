@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "include": [],
+  "references": [
+	{
+		"path": "../nested-1-2"
+	},
+	{
+		"path": "../nested-1-1"
+	},
+	{
+		"path": "./tsconfig.lib.json"
+	}
+],
+  "extends": "../../tsconfig.base.json"
+}

@@ -35,6 +35,15 @@
 	},
 	{
 		"path": "./packages/lib-10"
+	},
+	{
+		"path": "./packages/nested-1"
+	},
+	{
+		"path": "./packages/nested-1-1"
+	},
+	{
+		"path": "./packages/nested-1-2"
 	}
 ]
 }

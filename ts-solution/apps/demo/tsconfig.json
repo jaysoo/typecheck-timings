@@ -3,6 +3,15 @@
   "include": [],
   "references": [
 	{
+		"path": "../../packages/nested-1-2"
+	},
+	{
+		"path": "../../packages/nested-1-1"
+	},
+	{
+		"path": "../../packages/nested-1"
+	},
+	{
 		"path": "../../packages/lib-10"
 	},
 	{

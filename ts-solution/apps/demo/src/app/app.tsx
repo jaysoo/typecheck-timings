@@ -10,21 +10,23 @@ const Lib7 = React.lazy(() => import('@acme/lib-7'));
 const Lib8 = React.lazy(() => import('@acme/lib-8'));
 const Lib9 = React.lazy(() => import('@acme/lib-9'));
 const Lib10 = React.lazy(() => import('@acme/lib-10'));
+const Nested1 = React.lazy(() => import('@acme/nested-1'));
 
 export function App() {
   return (
     <>
       <ul>
-        <Link to="/">Home</Link>
-        <Link to="/lib-2">Lib 2</Link>
-        <Link to="/lib-3">Lib 3</Link>
-        <Link to="/lib-4">Lib 4</Link>
-        <Link to="/lib-5">Lib 5</Link>
-        <Link to="/lib-6">Lib 6</Link>
-        <Link to="/lib-7">Lib 7</Link>
-        <Link to="/lib-8">Lib 8</Link>
-        <Link to="/lib-9">Lib 9</Link>
-        <Link to="/lib-10">Lib 10</Link>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/lib-2">Lib 2</Link></li>
+        <li><Link to="/lib-3">Lib 3</Link></li>
+        <li><Link to="/lib-4">Lib 4</Link></li>
+        <li><Link to="/lib-5">Lib 5</Link></li>
+        <li><Link to="/lib-6">Lib 6</Link></li>
+        <li><Link to="/lib-7">Lib 7</Link></li>
+        <li><Link to="/lib-8">Lib 8</Link></li>
+        <li><Link to="/lib-9">Lib 9</Link></li>
+        <li><Link to="/lib-10">Lib 10</Link></li>
+        <li><Link to="/nested-1">Nested 1</Link></li>
       </ul>
       <Routes>
         <Route index element={<Lib1 />} />
@@ -37,6 +39,7 @@ export function App() {
         <Route path="lib-8" element={<Lib8 />} />
         <Route path="lib-9" element={<Lib9 />} />
         <Route path="lib-10" element={<Lib10 />} />
+        <Route path="nested-1" element={<Nested1 />} />
       </Routes>
     </>
   );

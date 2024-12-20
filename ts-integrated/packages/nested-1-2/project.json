@@ -1,0 +1,9 @@
+{
+  "name": "nested-1-2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/nested-1-2/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project nested-1-2 --web",
+  "targets": {}
+}
