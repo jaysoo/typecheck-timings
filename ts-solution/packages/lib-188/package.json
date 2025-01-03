@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-188",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-188",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-188/src"
+  }
+}

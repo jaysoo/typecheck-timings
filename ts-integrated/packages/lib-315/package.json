@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-315",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-315",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-315/src"
+  }
+}

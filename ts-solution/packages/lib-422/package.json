@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-422",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-422",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-422/src"
+  }
+}

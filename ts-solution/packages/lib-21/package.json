@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-21",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-21",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-21/src"
+  }
+}

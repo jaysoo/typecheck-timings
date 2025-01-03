@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-12",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-12",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-12/src"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-498",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-498",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-498/src"
+  }
+}

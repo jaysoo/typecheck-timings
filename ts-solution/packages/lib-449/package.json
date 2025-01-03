@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-449",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-449",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-449/src"
+  }
+}

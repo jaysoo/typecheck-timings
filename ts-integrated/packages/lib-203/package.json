@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-203",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-203",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-203/src"
+  }
+}
