@@ -1,19 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "out-tsc/lib-412",
+    "outDir": "../../dist/out-tsc",
     "types": [
       "node",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts"
-    ],
-    "rootDir": "src",
-    "jsx": "react-jsx",
-    "module": "esnext",
-    "moduleResolution": "bundler"
+    ]
   },
   "exclude": [
-    "dist",
     "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
