@@ -4,6 +4,7 @@ body {
 
 ul {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   list-style: none;
   margin: 0 0 10px 0;

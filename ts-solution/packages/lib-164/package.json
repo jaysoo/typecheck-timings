@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-164",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-164",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-164/src"
+  }
+}

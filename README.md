@@ -6,6 +6,9 @@ Run the timings (if you are on MacOS then you will need `gtime` installed -- use
 
 ```shell
 node bench.mjs
+
+# You probably need to increase max heap size as well or else the integrated run will run out of memory.
+NODE_OPTIONS='--max-old-space-size=16000' node bench.mjs
 ```
 
 NOTE: This script does not work on Windows currently due to missing `time` command to capture memory usage.
@@ -15,15 +18,17 @@ These are the results on my machine:
 ```shell
 INTEGRATED SETUP (OLD)
 ----------------------
-Timing typecheck... 61.80s (max memory: 2.70 GB)
+Timing typecheck... 186.53s (max memory: 6.14 GB)
 
 TS SOLUTION SETUP (NEW)
 -----------------------
-Timing typecheck (cold)... 116.74s (max memory: 1.57 GB)
-Timing typecheck (hot)... 0.57s (max memory: 101.60 MB)
-Timing typecheck (warm - 1 pkg updated)... 9.81s (max memory: 685.73 MB)
-Timing typecheck (warm - 5 pkg updated)... 45.63s (max memory: 935.87 MB)
-Timing typecheck (warm - 1 nested leaf pkg updated)... 14.31s (max memory: 796.62 MB)
-Timing typecheck (warm - 2 nested leaf pkg updated)... 27.36s (max memory: 944.88 MB)
-Timing typecheck (warm - 1 nested root pkg updated)... 1.38s (max memory: 243.01 MB)
+Timing typecheck (cold)... 175.52s (max memory: 945.74 MB)
+Timing typecheck (hot)... 25.33s (max memory: 429.68 MB)
+Timing typecheck (warm - 1 pkg updated)... 36.33s (max memory: 655.14 MB)
+Timing typecheck (warm - 5 pkg updated)... 48.21s (max memory: 702.96 MB)
+Timing typecheck (warm - 25 pkg updated)... 65.25s (max memory: 666.78 MB)
+Timing typecheck (warm - 100 pkg updated)... 80.69s (max memory: 664.58 MB)
+Timing typecheck (warm - 1 nested leaf pkg updated)... 26.66s (max memory: 407.54 MB)
+Timing typecheck (warm - 2 nested leaf pkg updated)... 31.17s (max memory: 889.86 MB)
+Timing typecheck (warm - 1 nested root pkg updated)... 26.67s (max memory: 393.78 MB)
 ```

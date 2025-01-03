@@ -1,0 +1,11 @@
+{
+  "name": "@acme/lib-259",
+  "version": "0.0.1",
+  "module": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "nx": {
+    "name": "lib-259",
+    "projectType": "library",
+    "sourceRoot": "packages/lib-259/src"
+  }
+}
