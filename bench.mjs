@@ -48,6 +48,10 @@ function formatMemory(kb) {
   }
 }
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function exec(cmd, opts) {
   return new Promise((resolve) => {
     let data = '';
@@ -104,64 +108,72 @@ end = performance.now();
 mem = output.match(memRegexp).groups.mem;
 process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
 
+await delay(2000);
+
 process.stdout.write('Timing typecheck (hot)... ');
 start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
+output = await exec(`${timeCmd} -v npx nx typecheck demo --skip-nx-cache`, {
   cwd: 'ts-solution',
 });
 end = performance.now();
 mem = output.match(memRegexp).groups.mem;
 process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
 
-process.stdout.write('Timing typecheck (warm - 1 pkg updated)... ');
-updatePkg(1);
-start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
-  cwd: 'ts-solution',
-});
-end = performance.now();
-mem = output.match(memRegexp).groups.mem;
-process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
 
-process.stdout.write('Timing typecheck (warm - 5 pkg updated)... ');
-updatePkg(2);
-updatePkg(3);
-updatePkg(4);
-updatePkg(5);
-updatePkg(6);
-start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
-  cwd: 'ts-solution',
-});
-end = performance.now();
-mem = output.match(memRegexp).groups.mem;
-process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
+const benchWarmLeafUpdates = async (n) => {
+  process.stdout.write(`Timing typecheck (warm - ${n} pkg updated)... `);
+  for (let i = 1; i <= n; i++) {
+    updatePkg(i);
+  }
+  start = performance.now();
+  output = await exec(`${timeCmd} -v npx nx typecheck demo --skip-nx-cache`, {
+    cwd: 'ts-solution',
+  });
+  end = performance.now();
+  mem = output.match(memRegexp).groups.mem;
+  process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
+};
+
+await delay(2000);
+await benchWarmLeafUpdates(1);
+await delay(2000);
+await benchWarmLeafUpdates(5);
+await delay(2000);
+await benchWarmLeafUpdates(25);
+await delay(2000);
+await benchWarmLeafUpdates(100);
+
+await delay(2000);
 
 process.stdout.write('Timing typecheck (warm - 1 nested leaf pkg updated)... ');
 updateNestedLeafPkg(1);
 start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
+output = await exec(`${timeCmd} -v npx nx typecheck demo --skip-nx-cache`, {
   cwd: 'ts-solution',
 });
 end = performance.now();
 mem = output.match(memRegexp).groups.mem;
 process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
+
+await delay(2000);
 
 process.stdout.write('Timing typecheck (warm - 2 nested leaf pkg updated)... ');
 updateNestedLeafPkg(1);
 updateNestedLeafPkg(2);
 start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
+output = await exec(`${timeCmd} -v npx nx typecheck demo --skip-nx-cache`, {
   cwd: 'ts-solution',
 });
 end = performance.now();
 mem = output.match(memRegexp).groups.mem;
 process.stdout.write(`${toSeconds(end - start)} (max memory: ${formatMemory(mem)})\n`);
 
+await delay(2000);
+
 process.stdout.write('Timing typecheck (warm - 1 nested root pkg updated)... ');
 updateNestedRootPkg();
 start = performance.now();
-output = await exec(`${timeCmd} -v npx nx typecheck demo`, {
+output = await exec(`${timeCmd} -v npx nx typecheck demo --skip-nx-cache`, {
   cwd: 'ts-solution',
 });
 end = performance.now();
