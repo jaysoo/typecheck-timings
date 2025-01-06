@@ -25,7 +25,7 @@ import { MagniDeseruntEtVoluptasNumquam132 } from './MagniDeseruntEtVoluptasNumq
 import { ExpeditaCorruptiTeneturQuisquamAut138 } from './ExpeditaCorruptiTeneturQuisquamAut138';
 import { AdipisciFugaNatus144 } from './AdipisciFugaNatus144';
 
-export function BlanditiisError150(_props: {
+export default function BlanditiisError150(_props: {
   children?: React.ReactNode;
   className?: string;
 }) {
