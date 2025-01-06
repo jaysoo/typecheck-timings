@@ -31,6 +31,23 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
       - run: npx nx typecheck demo
+  main-new-tsc:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ts-solution
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ts-solution/package-lock.json
+      - run: npm ci --legacy-peer-deps
+      - uses: nrwl/nx-set-shas@v4
+      - run: npx tsc --build --emitDeclarationOnly --pretty --verbose
   main-old:
     runs-on: ubuntu-latest
     defaults:
