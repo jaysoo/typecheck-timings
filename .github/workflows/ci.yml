@@ -30,7 +30,7 @@ jobs:
           cache-dependency-path: ts-solution/package-lock.json
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
-      - run: npx nx typecheck demo
+      - run: npx nx run-many -t typecheck --parallel 5
   main-new-tsc:
     runs-on: ubuntu-latest
     defaults:
@@ -64,5 +64,5 @@ jobs:
           cache-dependency-path: ts-integrated/package-lock.json
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
-      - run: npx nx typecheck demo
+      - run: npx nx run-many -t typecheck --parallel 5
 

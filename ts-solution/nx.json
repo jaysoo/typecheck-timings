@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "typecheck": {
+      "outputs": ["{projectRoot}/out-tsc"],
       "dependsOn": [
         "^typecheck"
       ]
